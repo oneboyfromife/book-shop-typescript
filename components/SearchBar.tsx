@@ -2,21 +2,21 @@ import { View, Text, TextInput, StyleSheet } from "react-native";
 import React, { useState } from "react";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 
-export interface IItem {
-  text: string;
-  newText: string;
-}
+// export interface IItem {
+//   text: string;
+//   newText: string;
+// }
 
 const SearchBar = () => {
-  const [text, setText] = useState();
+  //   const [text, setText] = useState();
 
   return (
     <View style={styles.searchBar}>
       <FontAwesome name="search" size={20} color="gray" />
       <TextInput
         placeholder="Type a book!"
-        onChangeText={(newText) => setText(newText)}
-        defaultValue={text}
+        // onChangeText={(newText) => setText(newText)}
+        // defaultValue={text}
         style={{
           marginLeft: 10,
           fontSize: 16,
