@@ -1,7 +1,14 @@
 import { StyleSheet, Image, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 
-const ProductCard = ({ imgUrl, year, title, author }) => {
+interface IItem {
+  imgUrl: string;
+  year: string;
+  title: string;
+  author: string;
+}
+
+const ProductCard: React.FC<IItem> = ({ imgUrl, year, title, author }) => {
   return (
     <TouchableOpacity>
       <Image source={{ uri: imgUrl }} />
