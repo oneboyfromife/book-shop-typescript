@@ -9,30 +9,9 @@ import React, { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import ProductCard from "../components/ProductCard";
 import { StatusBar } from "expo-status-bar";
-import { bookData } from "./book-data.json";
+import { bookData } from "../book-data.json";
 
 const HomeScreen = () => {
-  // const [isLoading, setLoading] = useState(true);
-  // const [data, setData] = useState([]);
-
-  // const getBooks = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       "https://jsonplaceholder.typicode.com/photos"
-  //     );
-  //     const json = await response.json();
-  //     setData(json);
-  //   } catch (error) {
-  //     console.error(error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getBooks();
-  // }, []);
-
   return (
     <SafeAreaView
       style={{
