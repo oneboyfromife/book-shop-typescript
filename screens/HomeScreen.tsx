@@ -9,7 +9,7 @@ import React, { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import ProductCard from "../components/ProductCard";
 import { StatusBar } from "expo-status-bar";
-import { bookData } from "../book-data.json";
+import { bookData } from "../book-data";
 
 const HomeScreen = () => {
   return (
@@ -38,11 +38,11 @@ const HomeScreen = () => {
 
       <FlatList
         data={bookData}
-        keyExtractor={({ id }, index) => id}
+        keyExtractor={({ isbn }, index) => isbn}
         numColumns={2}
         renderItem={({ item }) => (
           <ProductCard
-            key={item.id}
+            key={item.isbn}
             year={item.published}
             title={item.title}
             author={item.author}
