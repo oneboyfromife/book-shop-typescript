@@ -35,24 +35,21 @@ const HomeScreen = () => {
         </Text>
       </View>
       <SearchBar />
-      {isLoading ? (
-        <ActivityIndicator />
-      ) : (
-        <FlatList
-          data={bookData}
-          keyExtractor={({ id }, index) => id}
-          numColumns={2}
-          renderItem={({ item }) => (
-            <ProductCard
-              key={item.id}
-              year={item.published}
-              title={item.title}
-              author={item.author}
-              imgUrl={item.imgUrl}
-            />
-          )}
-        />
-      )}
+
+      <FlatList
+        data={bookData}
+        keyExtractor={({ id }, index) => id}
+        numColumns={2}
+        renderItem={({ item }) => (
+          <ProductCard
+            key={item.id}
+            year={item.published}
+            title={item.title}
+            author={item.author}
+            imgUrl={item.imgUrl}
+          />
+        )}
+      />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
